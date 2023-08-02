@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --color-primary: #006421;
+    --color-secondary: #1989AC;
+    --color-extra: #d4e9e2;
+    --color-dark: black;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4;
+    color: black;
+  background-color: #003f88;
+  border: 5px solid #003459;
+
+}
+
+/*header*/
+
+.heading {
+    color: gold;
+    text-align: center;
+    background-image: url('https://cdn.glitch.me/de432f43-b42b-442e-a86c-15c57e07d1c0/WhatsApp%20Image%202021-12-30%20at%2016.03.41.jpeg?v=1640954122699');
+    font-family: 'Noto Serif', serif;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    
+  }
+
+  .about-header {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Noto Serif', serif;
+    background-color: #003566;
+  }
+
+  /*Navbar*/
+
+.navbar {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%),
+    0 2px 2px rgb(0 0 0 / 6%), 
+    0 0 2px rgb(0 0 0 / 7%);
+
+}
+
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #0077b6;
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar-nav-right img {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.navbar-nav-left {
+    text-transform: uppercase;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.navbar-nav-right li:first-child a {
+    display: flex;
+    align-items: center;
+  text-transform: uppercase;
+
+}
+
+.navbar-nav-right li:nth-child(2) {
+    margin: 0 5px;
+  text-transform: uppercase;
+}
+
+
+/*Hamburger Menu*/
+
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    background: none;
+    border: none;
+    z-index: 10;
+    transition: all 0.25s;
+    display: none;
+}
+
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: black;
+    transform: rotate(0);
+    transition: all 0.5s;
+
+}
+
+
+.hamburger-middle {
+    transform: translateY(7px);
+}
+
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .hamburger-middle {
+  display: none;
+}
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+
+/* MOBILE MENU*/
+
+
+.mobile-menu{
+  position: fixed;
+  top: 90px;
+  right: 0;
+  color: black;
+  background-color: #004e89;
+  width: 80%;
+  height: 100%;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%),
+    0 2px 2px rgb(0 0 0 / 6%), 
+    0 0 2px rgb(0 0 0 / 7%);
+  transition: all 0.3s;
+}
+
+.mobile-menu img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.mobile-menu ul {
+  line-height: 3;
+  border-bottom: yellow solid 1px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.mobile-menu a:hover {
+  color: yellow;
+}
+
+.hidden {
+  transform: translateX(100%);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/*media*/
+
+@media(max-width: 960px) {
+    .text-xl {
+        font-size: 30px;
+    }
+
+    .text-lg {
+        font-size: 25px;
+    }
+
+    .text-md {
+        font-size: 19px;
+    }
+}
+
+
+
+
+@media(max-width: 768px) {
+  
+  .hamburger {
+    display: block;
+  }
+    .grid-col-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-reversed :first-child {
+        order: 0;
+    }
+
+    .navbar-brand img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar .navbar-nav-left,
+    .navbar .navbar-nav-right {
+        display: none;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+
+
+@media(min-width: 1440px) {
+    .box {
+        max-width: 1440px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .divider {
+        max-width: 90%;
+    }
+}
+
+
+
+
